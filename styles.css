@@ -9,6 +9,11 @@
   src: url(./BebasNeue-Regular.otf);
 }
 
+@font-face {
+  font-family: gilroy;
+  src: url(./Gilroy-Medium.ttf);
+}
+
 html,
 body {
   height: 100%;

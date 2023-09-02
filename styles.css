@@ -1,0 +1,433 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: myfont;
+  src: url(./BebasNeue-Regular.otf);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "gilroy";
+  color: white;
+  position: relative;
+  z-index: -99;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: #000511;
+  position: relative;
+  z-index: -99;
+  overflow-x: hidden;
+}
+
+#main::-webkit-scrollbar {
+  background-color: #000511;
+  width: 8px;
+}
+
+#main::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 110, 255),
+    rgb(255, 158, 158),
+    rgb(255, 230, 0)
+  );
+  border-radius: 1px;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  /* background-color: red; */
+}
+
+#nav #left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+#nav #left h3 {
+  color: #96c3cf;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+}
+
+#nav #left h3::after {
+  content: "";
+  background: linear-gradient(
+    to right,
+    rgb(0, 110, 255),
+    rgb(255, 158, 158),
+    rgb(255, 230, 0)
+  );
+  height: 1px;
+  width: 0;
+  position: absolute;
+  left: 50%;
+  bottom: -20%;
+  transition: all ease 0.5s;
+  transform: translate(-50%, 0);
+}
+
+#nav #left h3:hover::after {
+  width: 100%;
+}
+
+#nav button {
+  outline: none;
+  padding: 20px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid #96c3cf;
+  color: #96c3cf;
+}
+
+#page1 #logo-all {
+  height: 150px;
+  margin-left: 100px;
+  animation-name: doCircles;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes doCircles {
+  0% {
+    rotate: 0;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}
+
+#page1 {
+  position: relative;
+  background-color: #000511;
+  font-family: myfont;
+  z-index: -99;
+  height: 100%;
+  width: 100%;
+}
+
+#page1 h1:nth-child(2) {
+  font-size: 300px;
+  font-weight: 400;
+  /* background-color: red; */
+  width: 70%;
+  position: absolute;
+  top: 0%;
+  left: 20%;
+}
+
+#page1 h1:nth-child(3) {
+  font-size: 200px;
+  font-weight: 400;
+  /* background-color: red; */
+  width: 70%;
+  position: absolute;
+  left: 20%;
+  top: 35%;
+}
+
+#page1 h3 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 48%;
+}
+
+#contain {
+  height: 900px;
+  position: absolute;
+  top: -30%;
+  right: -26%;
+  /* background-color: red; */
+  z-index: -1;
+}
+
+#contain img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#page2 {
+  height: 40%;
+  width: 100%;
+  background: linear-gradient(to right, rgb(1, 152, 199), pink);
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page2 h3 {
+  color: rgba(233, 233, 233, 0.829);
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+#page2 h2 {
+  font-size: 30px;
+}
+
+#page2 #mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#page2 #mid h4 {
+  margin-top: 40px;
+}
+
+#page2 #mid::before {
+  content: "";
+  height: 2px;
+  width: 120%;
+  top: 70%;
+  position: absolute;
+  background-color: #fff;
+}
+
+#page2 #right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#page2 #right h4 {
+  margin-top: 40px;
+}
+
+#page2 #right::before {
+  content: "";
+  height: 2px;
+  width: 120%;
+  top: 70%;
+  position: absolute;
+  background-color: #fff;
+}
+
+#page3 {
+  margin-top: 50px;
+  height: 100%;
+  width: 100%;
+  background-color: #000511;
+  display: flex;
+}
+
+#page3 #left-corner {
+  padding: 150px;
+  padding-left: 100px;
+}
+
+#page3 #left-corner #image-container {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+}
+#page3 #left-corner img {
+  height: 100%;
+  width: 100%;
+  transition: all ease 0.3s;
+}
+#page3 #left-corner img:hover {
+  scale: 1.2;
+}
+
+#page3 #left-corner h4 {
+  margin-top: 40px;
+  color: #d4d4d4e4;
+}
+
+#page3 #right-corner #right-container {
+  margin-top: 140px;
+  margin-left: 40px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+#page3 #right-corner #right-container img {
+  height: 100%;
+  width: 100%;
+  transition: all ease 0.5s;
+}
+
+#page3 #right-corner #right-container #overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  background: linear-gradient(to bottom, transparent 60%, black);
+}
+
+#page3 #right-corner #about-section {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#page3 #right-corner #about-section h2 {
+  margin-top: -30px;
+  position: relative;
+  z-index: 9;
+  font-size: 34px;
+  font-weight: 600;
+}
+
+#page3 #right-corner #about-section h4 {
+  margin-top: -30px;
+  position: relative;
+  z-index: 9;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+#page4 {
+  height: 60%;
+  width: 100%;
+  background-color: #000511;
+  margin-top: 50px;
+}
+
+#page4 #line {
+  margin-top: 400px;
+  height: 2px;
+  width: 85%;
+  margin-left: 7.5%;
+  background-color: #2d2d2d;
+}
+
+#footer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 100px;
+  gap: 200px;
+}
+
+#footer #elem1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+#footer #elem2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+#footer #elem3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+#footer .footer-about {
+  display: flex;
+  gap: 40px;
+}
+
+#footer .footer-about .line1 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#footer .footer-about .line2 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.footer-about h3 {
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.footer-about h3::after {
+  content: "";
+  height: 1px;
+  width: 0;
+  background: linear-gradient(
+    to right,
+    rgb(0, 110, 255),
+    rgb(255, 158, 158),
+    rgb(255, 230, 0)
+  );
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  transition: all ease 0.4s;
+}
+
+.footer-about h3:hover::after {
+  width: 100%;
+}
+
+#elem1 img {
+  height: 40px;
+}
+
+#footer h3 {
+  font-weight: 400;
+}
+
+#footer h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#elem1 #link {
+  display: flex;
+  gap: 20px;
+}
+
+#footer-socials {
+  font-size: 20px;
+  display: flex;
+  gap: 40px;
+}
+
+#footer-socials i {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.186);
+  transition: all ease 0.4s;
+}
+
+#footer-socials i:hover {
+  border-color: #fff;
+}
